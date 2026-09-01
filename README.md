@@ -37,6 +37,21 @@ The default `LexiconModel` is intentionally small and transparent. It is not pre
 - `GET /health` — service readiness;
 - `POST /v1/predict` — one or more texts, limited to 100 per request.
 
+## Research case studies
+
+The serving application is the production-facing result of a broader experimental study. Curated notebooks preserve each distinct line of investigation without publishing datasets, trained weights, local paths or experiment logs:
+
+| Case study | Question | Techniques |
+|---|---|---|
+| [01 — Data preparation](notebooks/01_data_preparation.ipynb) | How should noisy tweets be normalized and split? | quality checks, deterministic split, leakage prevention |
+| [02 — Classical baseline](notebooks/02_classical_baseline.ipynb) | How far can a transparent baseline go? | TF-IDF, logistic regression, class metrics |
+| [03 — Word embeddings](notebooks/03_word_embeddings.ipynb) | Do learned representations improve the baseline? | Word2Vec/FastText design, OOV analysis |
+| [04 — Sequence model](notebooks/04_sequence_model.ipynb) | Can word order improve classification? | Keras, LSTM/BiLSTM, TensorBoard |
+| [05 — Transformer](notebooks/05_transformer.ipynb) | What is gained through transfer learning? | BERT-style fine-tuning, latency trade-offs |
+| [06 — Experiment tracking](notebooks/06_mlflow_tracking.ipynb) | How can experiments be compared reproducibly? | MLflow parameters, metrics and artifact contract |
+
+These notebooks consolidate the useful work found across the historical `dev` and `flask` branches, including experimental and advanced-model variants.
+
 ## Development
 
 ```bash
@@ -52,3 +67,4 @@ This public-ready reconstruction is inspired by the concepts demonstrated in `Pr
 ## License
 
 Released under the [MIT License](LICENSE).
+
