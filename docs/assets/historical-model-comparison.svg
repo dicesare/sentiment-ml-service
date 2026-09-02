@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="480" viewBox="0 0 980 480" role="img" aria-labelledby="title desc">
+  <title id="title">Historical sentiment classifier comparison</title>
+  <desc id="desc">Horizontal bars compare test accuracy and F1 for five historical experiments.</desc>
+  <rect width="980" height="480" fill="#0b1220"/>
+  <text x="48" y="48" fill="#f8fafc" font-family="Arial" font-size="26" font-weight="700">P7 historical model results</text>
+  <text x="48" y="76" fill="#94a3b8" font-family="Arial" font-size="14">Metrics extracted from executed notebook outputs — not rerun by the public demo</text>
+  <g font-family="Arial" font-size="14" fill="#cbd5e1">
+    <text x="48" y="135">BoW + Logistic Regression</text><text x="48" y="205">TF-IDF + Logistic Regression</text>
+    <text x="48" y="275">small BERT</text><text x="48" y="345">Custom BERT</text><text x="48" y="415">Tuned LSTM</text>
+  </g>
+  <g fill="#1e293b"><rect x="280" y="110" width="620" height="22" rx="5"/><rect x="280" y="180" width="620" height="22" rx="5"/><rect x="280" y="250" width="620" height="22" rx="5"/><rect x="280" y="320" width="620" height="22" rx="5"/><rect x="280" y="390" width="620" height="22" rx="5"/></g>
+  <g fill="#38bdf8"><rect x="280" y="110" width="493" height="22" rx="5"/><rect x="280" y="180" width="483" height="22" rx="5"/><rect x="280" y="250" width="472" height="22" rx="5"/><rect x="280" y="320" width="482" height="22" rx="5"/><rect x="280" y="390" width="406" height="22" rx="5"/></g>
+  <g font-family="Arial" font-size="14" fill="#f8fafc"><text x="785" y="127">79.48% accuracy</text><text x="775" y="197">77.94% accuracy</text><text x="764" y="267">76.13% accuracy · 76.51% F1</text><text x="774" y="337">77.81% accuracy · 78.39% F1</text><text x="698" y="407">65.44% accuracy · 64.09% F1</text></g>
+  <g font-family="Arial" font-size="12" fill="#64748b"><text x="280" y="452">0%</text><text x="580" y="452">50%</text><text x="880" y="452">100%</text></g>
+</svg>
+
