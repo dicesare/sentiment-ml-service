@@ -49,8 +49,25 @@ The serving application is the production-facing result of a broader experimenta
 | [04 — Sequence model](notebooks/04_sequence_model.ipynb) | Can word order improve classification? | Keras, LSTM/BiLSTM, TensorBoard |
 | [05 — Transformer](notebooks/05_transformer.ipynb) | What is gained through transfer learning? | BERT-style fine-tuning, latency trade-offs |
 | [06 — Experiment tracking](notebooks/06_mlflow_tracking.ipynb) | How can experiments be compared reproducibly? | MLflow parameters, metrics and artifact contract |
+| [07 — Historical results](notebooks/07_historical_results.ipynb) | What did the executed experiments actually show? | comparative metrics, learning curves, critical interpretation |
 
 These notebooks consolidate the useful work found across the historical `dev` and `flask` branches, including experimental and advanced-model variants.
+
+## Historical experiment results
+
+The original notebooks contain genuine executed experiments—not only design sketches. The table below reports values preserved in notebook outputs; they are historical observations, not claims reproduced by the lightweight public demo.
+
+| Experiment | Validation | Test | What was learned |
+|---|---:|---:|---|
+| Bag-of-Words + logistic regression | accuracy 79.72% | accuracy 79.48% | a strong, transparent baseline |
+| TF-IDF + logistic regression | accuracy 79.59% | accuracy 77.94% | richer weighting did not automatically improve generalisation |
+| small BERT, first implementation | — | accuracy 76.13%, AUC 82.00%, F1 76.51% | transfer learning produced balanced precision/recall |
+| custom BERT classifier | — | accuracy 77.81%, AUC 82.95%, F1 78.39% | the strongest documented deep-learning run |
+| tuned LSTM/embedding search | — | accuracy 65.44%, F1 64.09%, ROC-AUC 65.45% | very high recall exposed a poorly calibrated decision boundary |
+
+![Historical model comparison](docs/assets/historical-model-comparison.svg)
+
+The detailed [experiment inventory](docs/experiment_inventory.md) maps every notebook from `dev` and `flask` to the public portfolio story, including Word2Vec, FastText, LSTM/BiLSTM, convolutional layers, BERT, TensorBoard and MLflow.
 
 ## Development
 
